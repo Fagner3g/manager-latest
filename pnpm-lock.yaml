@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@prisma/client':
+        specifier: ^5.22.0
+        version: 5.22.0(prisma@5.22.0)
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.2
         version: 2.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -26,9 +29,15 @@ importers:
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      next-auth:
+        specifier: 5.0.0-beta.25
+        version: 5.0.0-beta.25(next@15.0.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.4.3
         version: 0.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      prisma:
+        specifier: ^5.22.0
+        version: 5.22.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -81,6 +90,20 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha1-e/aLIMCjUPk2kV/K4G9Y4yAHzjA=}
     engines: {node: '>=10'}
+
+  '@auth/core@0.37.2':
+    resolution: {integrity: sha1-DbipSgdoRr2I63+Sc2GFE+IoXLI=}
+    peerDependencies:
+      '@simplewebauthn/browser': ^9.0.1
+      '@simplewebauthn/server': ^9.0.2
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      '@simplewebauthn/browser':
+        optional: true
+      '@simplewebauthn/server':
+        optional: true
+      nodemailer:
+        optional: true
 
   '@emnapi/runtime@1.3.1':
     resolution: {integrity: sha1-D8qlda/DH0Vf0zU0wZOBz85sb2A=}
@@ -342,6 +365,9 @@ packages:
     resolution: {integrity: sha1-PcNboPHma0A8ALOTRPhwKY67HI4=}
     engines: {node: '>=12.4.0'}
 
+  '@panva/hkdf@1.2.1':
+    resolution: {integrity: sha1-yw0RHvcAE29FgDSf8CJr8lyFPyM=}
+
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha1-p36nQvqyV3UUVDTrHSMoz1ATrDM=}
     engines: {node: '>=14'}
@@ -349,6 +375,30 @@ packages:
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha1-HsF+LtvsJcgwbUJOz78Tx94aqjE=}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@prisma/client@5.22.0':
+    resolution: {integrity: sha1-2hypwTP77+ieDaeBx14cWdpfiAI=}
+    engines: {node: '>=16.13'}
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+
+  '@prisma/debug@5.22.0':
+    resolution: {integrity: sha1-WK9W7X9vMT35+xBCtiJNMXS79BI=}
+
+  '@prisma/engines-version@5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2':
+    resolution: {integrity: sha1-1TTdcjXBulojus1bkswMo4lMKPQ=}
+
+  '@prisma/engines@5.22.0':
+    resolution: {integrity: sha1-KPP1KigSyZCotm65OgmHgWpbbYQ=}
+
+  '@prisma/fetch-engine@5.22.0':
+    resolution: {integrity: sha1-T7aRtIOkUMVUiqwvg3smfdUO9S4=}
+
+  '@prisma/get-platform@5.22.0':
+    resolution: {integrity: sha1-/GdbydEmFMotreBQbJxKd+fd2s0=}
 
   '@radix-ui/primitive@1.1.0':
     resolution: {integrity: sha1-Qu+Ds7VtzK1dcDroxCkZpoeYu+I=}
@@ -637,6 +687,9 @@ packages:
 
   '@swc/helpers@0.5.13':
     resolution: {integrity: sha1-M+Y/880MreVXZyvXiIo5zn0RWow=}
+
+  '@types/cookie@0.6.0':
+    resolution: {integrity: sha1-6sOX8ovx1q4K4IE2PsovQlvt8NU=}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha1-WWoXRyM2lNUPatinhp/Lb1bPWEE=}
@@ -986,6 +1039,10 @@ packages:
 
   concat-map@0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+
+  cookie@0.7.1:
+    resolution: {integrity: sha1-L3PEIULV1c9xMQp0/ErmFnDl28k=}
+    engines: {node: '>= 0.6'}
 
   cross-spawn@7.0.5:
     resolution: {integrity: sha1-kQqsiA/1JD2pa3KLxlIaX2wvL4I=}
@@ -1629,6 +1686,9 @@ packages:
     resolution: {integrity: sha1-bH9zmN1LMUJ2f5oWivLzF6Qo0mg=}
     hasBin: true
 
+  jose@5.9.6:
+    resolution: {integrity: sha1-d/H5AdiOvcQF5XzOCNKpH0dSGIM=}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=}
 
@@ -1761,6 +1821,22 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
 
+  next-auth@5.0.0-beta.25:
+    resolution: {integrity: sha1-Op+XNOHY+lztVFNg8a/CSGLLktU=}
+    peerDependencies:
+      '@simplewebauthn/browser': ^9.0.1
+      '@simplewebauthn/server': ^9.0.2
+      next: ^14.0.0-0 || ^15.0.0-0
+      nodemailer: ^6.6.5
+      react: ^18.2.0 || ^19.0.0-0
+    peerDependenciesMeta:
+      '@simplewebauthn/browser':
+        optional: true
+      '@simplewebauthn/server':
+        optional: true
+      nodemailer:
+        optional: true
+
   next-themes@0.4.3:
     resolution: {integrity: sha1-6lRVLVmGk20Xfu05PqULZYrkSAA=}
     peerDependencies:
@@ -1795,6 +1871,9 @@ packages:
   npm-run-path@5.3.0:
     resolution: {integrity: sha1-4jNT0Ou5MX8XTpNBfkpNgtAknp8=}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  oauth4webapi@3.1.2:
+    resolution: {integrity: sha1-8U2fUMBF2eEJG2ELaZSlsRPpjcY=}
 
   object-assign@4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
@@ -1958,6 +2037,14 @@ packages:
     resolution: {integrity: sha1-TqR5BIqwWas65h0IIZD6v9mU/hk=}
     engines: {node: ^10 || ^12 || >=14}
 
+  preact-render-to-string@5.2.3:
+    resolution: {integrity: sha1-I9Fzdhgq9yCxBg1aQJmEPH/pL+Q=}
+    peerDependencies:
+      preact: '>=10'
+
+  preact@10.11.3:
+    resolution: {integrity: sha1-in5LoZ05ksSIsHha/MD4qhPHjRk=}
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha1-3rxkidem5rDnYRiIzsiAM30xY5Y=}
     engines: {node: '>= 0.8.0'}
@@ -2024,6 +2111,14 @@ packages:
   prettier@3.3.3:
     resolution: {integrity: sha1-MMVP4L4NjRLmrmHbsQEJ6gDVMQU=}
     engines: {node: '>=14'}
+    hasBin: true
+
+  pretty-format@3.8.0:
+    resolution: {integrity: sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U=}
+
+  prisma@5.22.0:
+    resolution: {integrity: sha1-H2cX/0h83vX1eZzBAQRZkg4uYZc=}
+    engines: {node: '>=16.13'}
     hasBin: true
 
   prop-types@15.8.1:
@@ -2449,6 +2544,16 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
+  '@auth/core@0.37.2':
+    dependencies:
+      '@panva/hkdf': 1.2.1
+      '@types/cookie': 0.6.0
+      cookie: 0.7.1
+      jose: 5.9.6
+      oauth4webapi: 3.1.2
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3(preact@10.11.3)
+
   '@emnapi/runtime@1.3.1':
     dependencies:
       tslib: 2.8.1
@@ -2651,10 +2756,37 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
+  '@panva/hkdf@1.2.1': {}
+
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
   '@pkgr/core@0.1.1': {}
+
+  '@prisma/client@5.22.0(prisma@5.22.0)':
+    optionalDependencies:
+      prisma: 5.22.0
+
+  '@prisma/debug@5.22.0': {}
+
+  '@prisma/engines-version@5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2': {}
+
+  '@prisma/engines@5.22.0':
+    dependencies:
+      '@prisma/debug': 5.22.0
+      '@prisma/engines-version': 5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2
+      '@prisma/fetch-engine': 5.22.0
+      '@prisma/get-platform': 5.22.0
+
+  '@prisma/fetch-engine@5.22.0':
+    dependencies:
+      '@prisma/debug': 5.22.0
+      '@prisma/engines-version': 5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2
+      '@prisma/get-platform': 5.22.0
+
+  '@prisma/get-platform@5.22.0':
+    dependencies:
+      '@prisma/debug': 5.22.0
 
   '@radix-ui/primitive@1.1.0': {}
 
@@ -2927,6 +3059,8 @@ snapshots:
   '@swc/helpers@0.5.13':
     dependencies:
       tslib: 2.8.1
+
+  '@types/cookie@0.6.0': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -3343,6 +3477,8 @@ snapshots:
   commander@4.1.1: {}
 
   concat-map@0.0.1: {}
+
+  cookie@0.7.1: {}
 
   cross-spawn@7.0.5:
     dependencies:
@@ -4174,6 +4310,8 @@ snapshots:
 
   jiti@1.21.6: {}
 
+  jose@5.9.6: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@4.1.0:
@@ -4307,6 +4445,12 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
+  next-auth@5.0.0-beta.25(next@15.0.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0):
+    dependencies:
+      '@auth/core': 0.37.2
+      next: 15.0.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react: 18.2.0
+
   next-themes@0.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       react: 18.2.0
@@ -4342,6 +4486,8 @@ snapshots:
   npm-run-path@5.3.0:
     dependencies:
       path-key: 4.0.0
+
+  oauth4webapi@3.1.2: {}
 
   object-assign@4.1.1: {}
 
@@ -4490,6 +4636,13 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  preact-render-to-string@5.2.3(preact@10.11.3):
+    dependencies:
+      preact: 10.11.3
+      pretty-format: 3.8.0
+
+  preact@10.11.3: {}
+
   prelude-ls@1.2.1: {}
 
   prettier-linter-helpers@1.0.0:
@@ -4501,6 +4654,14 @@ snapshots:
       prettier: 3.3.3
 
   prettier@3.3.3: {}
+
+  pretty-format@3.8.0: {}
+
+  prisma@5.22.0:
+    dependencies:
+      '@prisma/engines': 5.22.0
+    optionalDependencies:
+      fsevents: 2.3.3
 
   prop-types@15.8.1:
     dependencies:
