@@ -15,10 +15,9 @@ import type { User } from "@prisma/client";
  */
 export const sendAccountVerificationEmail = async (user: User, token: string) => {
   const { RESEND_EMAIL_FROM, VERIFICATION_SUBJECT, NEXT_PUBLIC_URL, VERIFICATION_URL } = process.env;
+
   if (!RESEND_EMAIL_FROM || !VERIFICATION_SUBJECT || !NEXT_PUBLIC_URL || !VERIFICATION_URL) {
-    return {
-      error: "Configuração de ambiente insuficiente para envio de e-mail.",
-    };
+    throw new Error("Configuração de ambiente insuficiente para envio de e-mail.");
   }
 
   const verificationUrl = `${NEXT_PUBLIC_URL}${VERIFICATION_URL}?token=${token}`;

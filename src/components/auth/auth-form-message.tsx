@@ -8,7 +8,7 @@ interface AuthFormMessageProps {
 }
 const AuthFormMessage = ({ message, type, title }: AuthFormMessageProps) => {
   return (
-    <Alert>
+    <Alert variant={type}>
       {type === "success" ? <CheckCircle className="h-4 w-4" /> : <AlertCircle className="h-4 w-4" />}
       {title && <AlertTitle>{title}</AlertTitle>}
       <AlertDescription>{message}</AlertDescription>
