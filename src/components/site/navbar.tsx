@@ -15,7 +15,7 @@ const Navbar = async () => {
         <Link href="#" className="text-foreground transition-colors hover:text-foreground">
           IRIS
         </Link>
-        <Link href="/docs" className="text-muted-foreground z-50 min-w-fit transition-colors hover:text-foreground">
+        <Link href="/docs" className="z-50 min-w-fit text-muted-foreground transition-colors hover:text-foreground">
           Home
         </Link>
         <Link href="#" className="text-muted-foreground transition-colors hover:text-foreground">

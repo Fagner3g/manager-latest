@@ -35,19 +35,19 @@ export default function Home() {
                   />
                 </svg>
               </a>
-              <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                <span className="from-primary bg-gradient-to-r to-gray-600 bg-clip-text text-transparent dark:to-white">
+              <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                <span className="bg-gradient-to-r from-primary to-gray-600 bg-clip-text text-transparent dark:to-white">
                   Pronto para evoluir seu atendimento?
                 </span>
               </h1>
-              <p className="mb-8 text-lg font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48 dark:text-gray-400">
+              <p className="mb-8 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
                 Iris Intelligence uma empresa de inteligência artificial que busca revolucionar o atendimento ao
                 cliente, com soluções inovadoras e personalizadas para suas necessidades.
               </p>
               <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
                 <a
                   href="#"
-                  className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 text-primary inline-flex items-center justify-center rounded-lg px-5 py-3 text-center font-medium focus:ring-4"
+                  className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center font-medium text-primary focus:ring-4"
                   target="_parent"
                   rel="noreferrer"
                 >
