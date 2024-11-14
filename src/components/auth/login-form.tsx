@@ -42,6 +42,7 @@ export default function LoginForm() {
   const onSubmit = async (values: z.infer<typeof CredentialsSchema>) => {
     startTransition(async () => {
       try {
+        console.log("VALUES: ", values);
         const resp = await login(values);
 
         if (!resp) {
@@ -52,7 +53,6 @@ export default function LoginForm() {
         }
 
         const { error, success, data } = resp;
-
         if (data?.twoFactorAuthEnabled) {
           setShowOTP(true);
           if (resp.error) {
@@ -76,9 +76,10 @@ export default function LoginForm() {
         }
 
         form.reset();
-      } catch {
+      } catch (e) {
         setError("Algo deu errado");
         setSuccess("");
+        console.log(e);
         form.reset();
       }
     });

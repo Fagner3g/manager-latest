@@ -16,6 +16,7 @@ export const configRoutes: ConfigRoutes = {
   protectedRoutes: [
     "/auth/settings",
     "/example/multi-step-form/campaign",
+    "/dashboard",
     // "/example/web-site-builder/campaign-hot-page",
   ],
 };

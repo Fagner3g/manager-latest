@@ -2,7 +2,6 @@
 
 import { sendAccountVerificationEmail } from "../email-verification";
 
-import { logger } from "@/config/logger.config";
 import { prisma } from "@/lib/db";
 import { RegisterSchema } from "@/schemas/auth";
 import { createVerificationToken } from "@/services/auth";
@@ -38,7 +37,6 @@ export const register = async (user: z.infer<typeof RegisterSchema>) => {
     });
     // Account verification flow with e-mail
     const verificationToken = await createVerificationToken(email);
-    logger.info(`Verification token: ${verificationToken.token}`);
 
     await sendAccountVerificationEmail(createdUser, verificationToken.token);
     return {
