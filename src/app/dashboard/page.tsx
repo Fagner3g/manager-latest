@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import LogoutButton from "@/components/auth/logout-button";
@@ -21,6 +22,7 @@ export default function Dashboard() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const route = useRouter();
 
   useEffect(() => {
     setMounted(true);
@@ -36,6 +38,10 @@ export default function Dashboard() {
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const navigateTo = (path: string) => {
+    route.push(path);
   };
 
   if (!mounted) {
@@ -112,13 +118,13 @@ export default function Dashboard() {
               </Tooltip>
             </TooltipProvider>
             <DropdownMenuContent align="end" className="w-56">
-              <DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => navigateTo("/auth/settings")}>
                 <Settings className="mr-2 h-4 w-4" />
                 <span>Configurações</span>
               </DropdownMenuItem>
               <DropdownMenuItem onSelect={toggleTheme}>
                 {theme === "dark" ? <Sun className="mr-2 h-4 w-4" /> : <Moon className="mr-2 h-4 w-4" />}
-                <span>{theme === "dark" ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}</span>
+                <span>{theme === "dark" ? "Modo Claro" : "Modo Escuro"}</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <LogoutButton>
