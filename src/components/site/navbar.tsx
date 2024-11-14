@@ -2,9 +2,12 @@ import Link from "next/link";
 
 import { ThemeToggle } from "../theme-toggle";
 
+import { auth } from "@/../auth";
+import LoginBadge from "@/components/auth/login-badge";
 import { Network } from "lucide-react";
 
 const Navbar = async () => {
+  const session = await auth();
   return (
     <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:min-w-full md:flex-row md:items-center md:justify-between md:gap-5 md:text-sm lg:gap-6">
       <div className="flex w-full flex-row gap-4">
@@ -30,6 +33,7 @@ const Navbar = async () => {
       </div>
 
       <div className="flex items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
+        <LoginBadge user={session?.user} />
         <ThemeToggle />
       </div>
     </nav>
