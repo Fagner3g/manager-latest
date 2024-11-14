@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 
 import AuthCard from "./auth-card";
 import AuthFormMessage from "./auth-form-message";
-import SocialLogin from "./social-login";
 
 import { login } from "@/actions/auth";
 import { Button } from "@/components/ui/button";
@@ -183,7 +182,7 @@ export default function LoginForm() {
         </Form>
 
         <Separator />
-        <SocialLogin />
+        {/* <SocialLogin /> */}
 
         {!showOTPForm && (
           <div className="mt-4 text-center text-sm">

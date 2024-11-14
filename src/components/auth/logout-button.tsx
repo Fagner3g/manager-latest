@@ -9,10 +9,9 @@ type Props = {
 
 const LogoutButton = ({ children }: Props) => {
   return (
-    // biome-ignore lint: reason
     <div
       onClick={async () => {
-        await signOut();
+        await signOut({ redirect: true, redirectTo: "/" });
       }}
     >
       {children}

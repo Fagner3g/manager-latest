@@ -20,6 +20,7 @@ export const {
   },
   pages: {
     signIn: "/auth/login",
+    signOut: "/auth/logout",
   },
   callbacks: {
     async signIn({ user, account }) {
