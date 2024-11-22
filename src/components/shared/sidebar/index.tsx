@@ -2,13 +2,16 @@ import { Logo } from "../logo";
 import { MenuSidebar } from "./menu-sidebar";
 import { SidebarRoutes } from "./sidebar-routes";
 
-export function Sidebar() {
+import { auth } from "@/config/auth";
+
+export async function Sidebar() {
+  const session = await auth();
   return (
     <div className="h-screen">
       <div className="flex h-full flex-col border-r">
         <Logo />
         <SidebarRoutes />
-        <MenuSidebar />
+        <MenuSidebar name={session?.user.name || ""} />
       </div>
     </div>
   );

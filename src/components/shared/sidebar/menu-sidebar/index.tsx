@@ -1,6 +1,5 @@
 "use client";
 
-import { useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 
@@ -17,10 +16,9 @@ import {
 import { cn } from "@/lib/utils";
 import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
 
-export function MenuSidebar() {
+export function MenuSidebar({ name }: { name: string }) {
   const route = useRouter();
   const { setTheme, theme } = useTheme();
-  const { data: session } = useSession();
 
   return (
     <div className="border-t border-border p-4">
@@ -28,7 +26,7 @@ export function MenuSidebar() {
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className={cn("w-full justify-start")}>
             <User className={"h-5 w-5"} />
-            <span>{session?.user.name}</span>
+            <span>{name}</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-56">
