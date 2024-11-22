@@ -6,7 +6,7 @@ import { prisma } from "@/lib/db";
 import { findUserbyEmail } from "@/services";
 import { isTwoFactorAutenticationEnabled } from "@/services/auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { UserRole } from "@prisma/client";
+
 export const {
   handlers: { GET, POST },
   auth,
@@ -44,7 +44,7 @@ export const {
           const isTwoFactorEnabled = await isTwoFactorAutenticationEnabled(user?.id || "");
           token.isTwoFactorEnabled = isTwoFactorEnabled;
         }
-        token.role = UserRole.DEFAULT;
+        token.role = user.role;
       }
       return token;
     },

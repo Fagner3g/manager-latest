@@ -32,7 +32,7 @@ export const register = async (user: z.infer<typeof RegisterSchema>) => {
         name,
         email,
         password: hashedPassword,
-        role: UserRole.DEFAULT,
+        role: UserRole.ADMIN,
       },
     });
     // Account verification flow with e-mail

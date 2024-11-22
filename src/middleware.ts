@@ -1,15 +1,15 @@
 import NextAuth from "next-auth";
 import { NextResponse } from "next/server";
 
+import { configRoutes } from "./config/routes";
+import { createRouteMatchers } from "./lib/route";
+
 import authConfig from "@/config/auth.config";
-import { configRoutes } from "@/config/routes";
-import { createRouteMatchers } from "@/lib/route";
 
 const { auth } = NextAuth(authConfig);
 
 export default auth((req) => {
   const { isPublicRoute, isProtectedRoute, isApiRoute, isAuthRoute } = createRouteMatchers(configRoutes, req);
-  const { nextUrl } = req;
   const isLoggedIn = !!req.auth;
   console.log(`Public: ${isPublicRoute}`);
   console.log(`Protected: ${isProtectedRoute}`);
@@ -17,10 +17,6 @@ export default auth((req) => {
   console.log(`Auth: ${isAuthRoute}`);
   if (isProtectedRoute && !isLoggedIn) {
     return NextResponse.redirect(new URL("/auth/login", req.url));
-  }
-
-  if (nextUrl.pathname === "/" && isLoggedIn) {
-    return NextResponse.redirect(new URL("/dashboard", req.url));
   }
 
   // console.log(`Middleware: ${req.nextUrl.pathname}`);

@@ -5,7 +5,7 @@ import { AuthError, CredentialsSignin } from "next-auth";
 import { sendAccountVerificationEmail } from "../email-verification";
 import { sendTwoFactorAuthEmail } from "../two-factor";
 
-import { signIn } from "@/../auth";
+import { signIn } from "@/config/auth";
 import { CredentialsSchema } from "@/schemas/auth";
 import { findUserbyEmail } from "@/services";
 import {
@@ -86,11 +86,14 @@ export const login = async (credentials: z.infer<typeof CredentialsSchema>) => {
       }
     }
 
-    await signIn("credentials", {
+    const resp = await signIn("credentials", {
       email,
       password,
       redirectTo: process.env.AUTH_LOGIN_REDIRECT,
+      redirect: true,
     });
+
+    return resp;
   } catch (err) {
     if (err instanceof AuthError) {
       if (err instanceof CredentialsSignin) {

@@ -41,7 +41,6 @@ export default function LoginForm() {
   const onSubmit = async (values: z.infer<typeof CredentialsSchema>) => {
     startTransition(async () => {
       try {
-        console.log("VALUES: ", values);
         const resp = await login(values);
 
         if (!resp) {
