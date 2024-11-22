@@ -2,17 +2,17 @@
 
 import { useRouter } from "next/navigation";
 
-import LogoutButton from "../auth/logout-button";
-import { Button } from "../ui/button";
+import LogoutButton from "../../auth/logout-button";
+import { UserName } from "./UserName";
+
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { UserName } from "./UserName";
-
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { LogOut, Settings, User, User2 } from "lucide-react";
 

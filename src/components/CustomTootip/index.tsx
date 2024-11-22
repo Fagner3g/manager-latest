@@ -1,5 +1,5 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
-import { CustomIconProps } from "./CustomTootip.type";
+import { CustomIconProps } from "./types";
 
 import { Info } from "lucide-react";
 

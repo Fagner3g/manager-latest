@@ -1,4 +1,4 @@
-import { CustomIconProps } from "./CustomIcon.type";
+import { CustomIconProps } from "./types";
 
 export function CustomIcon({ icon: Icon }: CustomIconProps) {
   return (

@@ -1,5 +1,5 @@
-import { NavBar } from "@/components/NavBar";
-import { Sidebar } from "@/components/Sidebar";
+import { NavBar } from "@/components/Layout/NavBar";
+import { Sidebar } from "@/components/Layout/Sidebar";
 
 export default function RootLayout({ children }: { children: React.ReactElement }) {
   return (

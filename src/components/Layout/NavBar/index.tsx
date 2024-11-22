@@ -1,5 +1,5 @@
+import { ToggleTheme } from "../../ToggleTheme";
 import { SidebarRoutes } from "../SidebarRoutes";
-import { ToggleTheme } from "../ToggleTheme";
 
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
