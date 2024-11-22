@@ -5,7 +5,7 @@ import { Noto_Sans_Display } from "next/font/google";
 
 import "./globals.css";
 import { auth } from "@/../auth";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ThemeProvider } from "@/components/Providers/ThemeProvider";
 
 const noto = Noto_Sans_Display({ subsets: ["latin"] });
 

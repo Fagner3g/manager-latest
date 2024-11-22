@@ -1,7 +1,7 @@
 "use client";
 
 import { SidebarItem } from "../SidebarItem";
-import { dataGeneralSidebar } from "./SidebarRoutes.data";
+import { dataGeneralSidebar } from "./data";
 
 export function SidebarRoutes() {
   return (
@@ -13,7 +13,7 @@ export function SidebarRoutes() {
           ))}
         </div>
       </div>
-      <footer className="mt-3 p-3 text-center">2024 - Todos os direitos reservados</footer>
+      <footer className="mt-3 p-3 text-center text-xs"></footer>
     </div>
   );
 }

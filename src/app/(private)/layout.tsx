@@ -10,8 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactElement 
 
       <div className="w-full xl:ml-80">
         <NavBar />
-        <div className="bg-[#fafbfc] p-6 dark:bg-secondary"></div>
-        {children}
+        <div className="bg-[#fafbfc] p-6 dark:bg-secondary">{children}</div>
       </div>
     </div>
   );

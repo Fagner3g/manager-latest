@@ -1,4 +1,5 @@
 import { Logo } from "../Logo";
+import { MenuSidebar } from "../MenuSidebar";
 import { SidebarRoutes } from "../SidebarRoutes";
 
 export function Sidebar() {
@@ -7,6 +8,7 @@ export function Sidebar() {
       <div className="flex h-full flex-col border-r">
         <Logo />
         <SidebarRoutes />
+        <MenuSidebar />
       </div>
     </div>
   );

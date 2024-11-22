@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { SidebarItemProps } from "./SidebarItem.type";
+import { SidebarItemProps } from "./types";
 
 import { cn } from "@/lib/utils";
 
