@@ -5,7 +5,7 @@ import { AuthError, CredentialsSignin } from "next-auth";
 import { sendAccountVerificationEmail } from "../email-verification";
 import { sendTwoFactorAuthEmail } from "../two-factor";
 
-import { signIn } from "@/config/auth";
+import { signIn } from "@/auth";
 import { CredentialsSchema } from "@/schemas/auth";
 import { findUserbyEmail } from "@/services";
 import {

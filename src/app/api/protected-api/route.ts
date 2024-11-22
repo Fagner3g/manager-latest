@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { auth } from "@/config/auth";
+import { auth } from "@/auth";
 
 export const GET = auth((req) => {
   if (req.auth)

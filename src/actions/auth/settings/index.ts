@@ -1,6 +1,6 @@
 "use server";
 
-import { auth, update } from "@/config/auth";
+import { auth, update } from "@/auth";
 import { prisma } from "@/lib/db";
 import { UserSettingsSchema } from "@/schemas/auth";
 import { findUserbyId } from "@/services";

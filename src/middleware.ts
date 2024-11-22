@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import { configRoutes } from "./config/routes";
 import { createRouteMatchers } from "./lib/route";
 
-import authConfig from "@/config/auth.config";
+import authConfig from "@/auth.config";
 
 const { auth } = NextAuth(authConfig);
 

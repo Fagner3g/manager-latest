@@ -2,7 +2,7 @@ import { Logo } from "../logo";
 import { MenuSidebar } from "./menu-sidebar";
 import { SidebarRoutes } from "./sidebar-routes";
 
-import { auth } from "@/config/auth";
+import { auth } from "@/auth";
 
 export async function Sidebar() {
   const session = await auth();

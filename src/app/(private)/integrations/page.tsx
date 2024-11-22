@@ -5,3 +5,8 @@ export default function Integrations() {
     </div>
   );
 }
+Integrations.auth = {
+  role: "teste",
+  loading: <h1>Loading...</h1>,
+  unauthorized: "/login-with-different-user", // redirect to this url
+};
