@@ -1,7 +1,7 @@
 import { CardSummaryProps } from "./CardSummary.type";
 
-import { CustomIcon } from "@/components/CustomIcon";
-import { CustomTootip } from "@/components/CustomTootip";
+import { CustomIcon } from "@/components/custom-icon";
+import { CustomTootip } from "@/components/custom-tootip";
 
 export function CardSummary(props: CardSummaryProps) {
   const { evarage, icon, title, tootipText, total } = props;

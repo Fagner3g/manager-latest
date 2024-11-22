@@ -1,4 +1,4 @@
-import Navbar from "@/components/Site/navbar";
+import Navbar from "@/components/site/navbar";
 
 export default function Home() {
   return (

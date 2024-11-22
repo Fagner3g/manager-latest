@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import { Noto_Sans_Display } from "next/font/google";
 
 import "./globals.css";
-import { ThemeProvider } from "@/components/Providers/ThemeProvider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { auth } from "@/config/auth";
 
 const noto = Noto_Sans_Display({ subsets: ["latin"] });

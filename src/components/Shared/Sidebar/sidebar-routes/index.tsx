@@ -1,6 +1,6 @@
 "use client";
 
-import { SidebarItem } from "../SidebarItem";
+import { SidebarItem } from "../sidebar-item";
 
 import { dataGeneralSidebar } from "@/data/itemsNavbar";
 

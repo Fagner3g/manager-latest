@@ -1,6 +1,6 @@
 import { ToggleTheme } from "../../ToggleTheme";
-import { Logo } from "../Logo";
-import { SidebarRoutes } from "../Sidebar/SidebarRoutes";
+import { Logo } from "../logo";
+import { SidebarRoutes } from "../sidebar/sidebar-routes";
 
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";

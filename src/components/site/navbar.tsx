@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import { ThemeToggle } from "../theme-toggle";
 
-import { auth } from "@/../auth";
 import LoginBadge from "@/components/auth/login-badge";
+import { auth } from "@/config/auth";
 import { Network } from "lucide-react";
 
 const Navbar = async () => {
