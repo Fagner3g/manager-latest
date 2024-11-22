@@ -1,6 +1,6 @@
 import { Logo } from "../Logo";
-import { MenuSidebar } from "../MenuSidebar";
-import { SidebarRoutes } from "../SidebarRoutes";
+import { MenuSidebar } from "./MenuSidebar";
+import { SidebarRoutes } from "./SidebarRoutes";
 
 export function Sidebar() {
   return (
