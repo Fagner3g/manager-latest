@@ -1,4 +1,4 @@
-import { ToggleTheme } from "../../ToggleTheme";
+import { ToggleTheme } from "../../toggle-theme";
 import { Logo } from "../logo";
 import { SidebarRoutes } from "../sidebar/sidebar-routes";
 

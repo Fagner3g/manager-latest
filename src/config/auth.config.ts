@@ -1,7 +1,5 @@
 import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import Github from "next-auth/providers/github";
-import Google from "next-auth/providers/google";
 
 import { UserNotFound } from "@/lib/auth";
 import { CredentialsSchema } from "@/schemas/auth";
@@ -26,7 +24,5 @@ export default {
         return null;
       },
     }),
-    Google,
-    Github,
   ],
 } satisfies NextAuthConfig;
