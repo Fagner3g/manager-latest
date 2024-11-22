@@ -90,7 +90,7 @@ export const login = async (credentials: z.infer<typeof CredentialsSchema>) => {
       email,
       password,
       redirectTo: process.env.AUTH_LOGIN_REDIRECT,
-      redirect: true,
+      redirect: false,
     });
 
     return resp;

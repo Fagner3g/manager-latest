@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 
@@ -20,6 +20,7 @@ import { LoaderIcon } from "lucide-react";
 import type { z } from "zod";
 
 export default function LoginForm() {
+  const route = useRouter();
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string>("");
   const [success, setSuccess] = useState<string>("");
@@ -72,7 +73,7 @@ export default function LoginForm() {
           setError("");
           return;
         }
-
+        route.push("/dashboard");
         form.reset();
       } catch (e) {
         setError("Algo deu errado");
