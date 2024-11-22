@@ -1,5 +1,5 @@
-import { NavBar } from "@/components/shared/navbar";
-import { Sidebar } from "@/components/shared/sidebar";
+import { NavBar } from "@/components/shareds/navbar";
+import { Sidebar } from "@/components/shareds/sidebar";
 
 export default function LayoutDashboard({ children }: { children: React.ReactElement }) {
   return (
