@@ -1,8 +1,7 @@
 import NextAuth from "next-auth";
 import { NextResponse } from "next/server";
 
-import authConfig from "../auth.config";
-
+import authConfig from "@/config/auth.config";
 import { configRoutes } from "@/config/routes";
 import { createRouteMatchers } from "@/lib/route";
 
