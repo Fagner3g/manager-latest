@@ -1,5 +1,4 @@
-import { auth } from "../../../../auth";
-
+import { auth } from "@/auth";
 import UserSettingsForm from "@/components/auth/user-settings-form";
 
 export default async function Settings() {
