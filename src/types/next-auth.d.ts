@@ -1,10 +1,6 @@
 import type { DefaultSession } from "next-auth";
 // The `JWT` interface can be found in the `next-auth/jwt` submodule
 declare module "next-auth" {
-  interface User {
-    role: UserRole;
-    isTwoFactorEnabled: boolean;
-  }
   /**
    * Returned by `auth`, `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
    */

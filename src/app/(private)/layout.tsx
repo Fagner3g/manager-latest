@@ -1,16 +1,18 @@
-import { NavBar } from "@/components/shared/navbar";
-import { Sidebar } from "@/components/shared/sidebar";
+import { AppSidebar } from "@/components/layout/app-sidebar";
+import { Logo } from "@/components/layout/logo";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
-export default function LayoutDashboard({ children }: { children: React.ReactElement }) {
+export default function RootLayout({ children }: { children: React.ReactElement }) {
   return (
-    <div className="flex h-full w-full">
-      <div className="hidden h-full w-60 md:fixed md:block xl:fixed xl:block">
-        <Sidebar />
-      </div>
-      <div className="h-full w-full md:ml-60 xl:ml-60">
-        <NavBar />
-        <div className="bg-[#fafbfc] p-6 dark:bg-secondary">{children}</div>
-      </div>
-    </div>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset>
+        <div className="flex flex-row items-center justify-between border-b border-border p-4 md:hidden">
+          <SidebarTrigger />
+          <Logo />
+        </div>
+        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">{children}</div>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }
