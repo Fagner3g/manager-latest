@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ThemeToggle } from "../theme-toggle";
+import { ThemeToggle } from "./theme-toggle";
 
 import { auth } from "@/auth";
 import LoginBadge from "@/components/auth/login-badge";
