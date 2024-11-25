@@ -44,7 +44,7 @@ export const {
           const isTwoFactorEnabled = await isTwoFactorAutenticationEnabled(user?.id || "");
           token.isTwoFactorEnabled = isTwoFactorEnabled;
         }
-        token.role = user.role;
+        token.role = session.user.role;
       }
       return token;
     },
